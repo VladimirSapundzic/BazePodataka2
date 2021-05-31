@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl" Namespace="ModelProj.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005">
+        <EntityContainer Name="ModelProjTargetContainer" >
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="ModelProj" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="ModelProjContext" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="NagradaSet" EntityType="ModelProj.Nagrada" />
+          <EntitySet Name="IzdavacSet" EntityType="ModelProj.Izdavac" />
+          <EntitySet Name="AutorSet" EntityType="ModelProj.Autor" />
+          <EntitySet Name="SkladisteSet" EntityType="ModelProj.Skladiste" />
+        </EntityContainer>
+        <EntityType Name="Nagrada">
+          <Key>
+            <PropertyRef Name="IdNgr" />
+          </Key>
+          <Property Name="IdNgr" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NazivNagrade" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Izdavac">
+          <Key>
+            <PropertyRef Name="IdIzd" />
+          </Key>
+          <Property Name="IdIzd" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NazivIzdavaca" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Autor">
+          <Key>
+            <PropertyRef Name="IdAut" />
+          </Key>
+          <Property Name="IdAut" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ImeAutora" Type="String" Nullable="false" />
+          <Property Name="PrezAutora" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Skladiste">
+          <Key>
+            <PropertyRef Name="IdSkl" />
+          </Key>
+          <Property Name="IdSkl" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AdrSkladista" Type="String" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs" Space="C-S">
+        <Alias Key="Model" Value="ModelProj" />
+        <Alias Key="Target" Value="ModelProj.Store" />
+        <EntityContainerMapping CdmEntityContainer="ModelProjContext" StorageEntityContainer="ModelProjTargetContainer">
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
