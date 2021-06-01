@@ -5,10 +5,33 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="772ac8ab9ed34e9298e94c4d042017ce" Name="Diagram1" >
-        <EntityTypeShape EntityType="ModelProj.Nagrada" Width="1.5" PointX="5" PointY="2.5" />
-        <EntityTypeShape EntityType="ModelProj.Izdavac" Width="1.5" PointX="7.25" PointY="2.5" />
-        <EntityTypeShape EntityType="ModelProj.Autor" Width="1.5" PointX="9.625" PointY="2.5" />
-        <EntityTypeShape EntityType="ModelProj.Skladiste" Width="1.5" PointX="11.75" PointY="2.5" />
+        <EntityTypeShape EntityType="ModelProj.Nagrada" Width="1.5" PointX="3.875" PointY="3.125" />
+        <EntityTypeShape EntityType="ModelProj.Izdavac" Width="1.5" PointX="8.25" PointY="2.5" />
+        <EntityTypeShape EntityType="ModelProj.Autor" Width="1.5" PointX="11.125" PointY="2.75" />
+        <EntityTypeShape EntityType="ModelProj.Skladiste" Width="1.5" PointX="13.75" PointY="4.75" />
+        <EntityTypeShape EntityType="ModelProj.Korisnik" Width="1.5" PointX="10.125" PointY="11.375" />
+        <EntityTypeShape EntityType="ModelProj.Kupac" Width="1.5" PointX="8.625" PointY="9.5" />
+        <InheritanceConnector EntityType="ModelProj.Kupac" />
+        <EntityTypeShape EntityType="ModelProj.Administrator" Width="1.5" PointX="11.25" PointY="9.25" />
+        <InheritanceConnector EntityType="ModelProj.Administrator" />
+        <EntityTypeShape EntityType="ModelProj.Recenzija" Width="1.5" PointX="6.125" PointY="6.125" />
+        <EntityTypeShape EntityType="ModelProj.Knjiga" Width="1.5" PointX="8.375" PointY="4.75" />
+        <AssociationConnector Association="ModelProj.KnjigaRecenzija" />
+        <AssociationConnector Association="ModelProj.KupacRecenzija" />
+        <EntityTypeShape EntityType="ModelProj.Nalazi" Width="1.5" PointX="11" PointY="4.75" />
+        <AssociationConnector Association="ModelProj.KnjigaNalazi" />
+        <AssociationConnector Association="ModelProj.SkladisteNalazi" />
+        <AssociationConnector Association="ModelProj.AutorKnjiga" />
+        <AssociationConnector Association="ModelProj.IzdavacKnjiga" />
+        <EntityTypeShape EntityType="ModelProj.Osvaja" Width="1.5" PointX="6" PointY="3.75" />
+        <AssociationConnector Association="ModelProj.NagradaOsvaja" />
+        <AssociationConnector Association="ModelProj.KnjigaOsvaja" />
+        <EntityTypeShape EntityType="ModelProj.Kreira" Width="1.5" PointX="13.5" PointY="9.25" />
+        <AssociationConnector Association="ModelProj.KreiraAdministrator" />
+        <AssociationConnector Association="ModelProj.AdministratorKreira" />
+        <EntityTypeShape EntityType="ModelProj.Kupovina" Width="1.5" PointX="10.375" PointY="7" />
+        <AssociationConnector Association="ModelProj.KnjigaKupovina" />
+        <AssociationConnector Association="ModelProj.KupacKupovina" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
